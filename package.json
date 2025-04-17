@@ -1,0 +1,22 @@
+{
+  "name": "multi-clicktags",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anand-venkatraman/multi-clicktags.git"
+  },
+  "author": "Anand Venkatraman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anand-venkatraman/multi-clicktags/issues"
+  },
+  "homepage": "https://github.com/anand-venkatraman/multi-clicktags#readme"
+}
