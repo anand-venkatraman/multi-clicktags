@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+
+  "title": "banner_fluad_320x50",
+  "description": "",
+
+  "width" : "320",
+  "height": "50",
+
+  "events": {
+    "enabled": 1,
+    "list": {}
+  },
+
+  "clicktags": {
+    "clickTAG": "https://www.cslseqirus.de/",
+	  "clickTAG2": "https://www.cslseqirus.de/produkte/bestellung-von-grippeimpfstoffen",
+	  "clickTAG3": "https://www.cslseqirus.de/-/media/seqirus-germany/product-docs/fluad-tetra.pdf",
+  },
+
+  "source": "index.html"
+}
