@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <style>
+      .center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        width: 30%;
+      }
+      .content > div {
+        padding: 0 0 0px 0;
+        text-align: center;
+        line-height: 20px;
+      }
+      * {
+        font-family: "Open Sans",sans-serif;
+        font-size: 14px;
+        color: #676767;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .logo {
+        margin: auto;
+        width: 60px;
+        padding: 5px 0 0 0;
+      }
+      a {
+        color: #121212;
+      }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            redirectToUrl();
+        });
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+    
+        function redirectToUrl() {
+            const rurl = getQueryParam('rurl');
+            document.getElementById('redirectUrl').innerText = rurl;
+            document.getElementById('redirLink').href = rurl;
+        }
+    </script>
+  </head>
+  <body>
+      <div class="logo">
+        <a href="https://pulsepoint.com" target="_blank"><img src="https://media.contextweb.com/creatives/click/logo.png" width="50" height="50"></a>
+      </div>
+      <div class="center">
+          <div class="content">
+            <div>
+              <img src="https://media.contextweb.com/creatives/click/ctr.svg"/>
+            </div>
+            <div>
+                Looks like you're trying to click through to
+            </div>
+            <div id="redirectUrl"></div>
+            <div>
+              <a id="redirLink" target="_blank">Please click here to continue</a>
+            </div>
+          </div>
+      </div>
+  </body>
+</html>
