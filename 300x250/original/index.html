@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>300x250-EN_Case</title>
+<style>
+    .banner {
+      width: 300px;
+      height: 250px;
+      border: 1px solid #000000; /* 1px black border */
+		position: relative;
+      overflow: hidden;
+    }
+
+    .frame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .frame1 {
+      background-image: url('https://www.fisika.ca/FisikaProgramming/Case_Banners/EN/300x250/300x250-ENG-01.jpg');
+      background-size: cover;
+    }
+
+    .frame2 {
+      background-image: url('https://www.fisika.ca/FisikaProgramming/Case_Banners/EN/300x250/300x250-ENG-02.jpg');
+      background-size: cover;
+      display: none;
+    }
+	      .frame3 {
+      background-image: url('https://www.fisika.ca/FisikaProgramming/Case_Banners/EN/300x250/300x250-ENG-03.jpg');
+      background-size: cover;
+      display: none;
+    }
+	  	      .frame4 {
+      background-image: url('https://www.fisika.ca/FisikaProgramming/Case_Banners/EN/300x250/300x250-ENG-04.jpg');
+      background-size: cover;
+      display: none;
+    }
+
+    .link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      display: block;
+    }
+
+    .center-link {
+       position: absolute;
+      top: 30%;
+      left: 83%;
+      transform: translate(-50%, -50%);
+      padding: 20px 35px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<div class="banner">
+<div class="frame frame1">
+<a class="link" href="https://www.bms.com/assets/bms/ca/brand-guides-and-tools/OPDIVO_GE_CASE.pdf" id="clickTag1" rel="noopener noreferrer" target="_blank"></a>
+</div>
+<div class="frame frame2">
+<a class="link" href="https://www.bms.com/assets/bms/ca/brand-guides-and-tools/OPDIVO_GE_CASE.pdf" id="clickTag2" rel="noopener noreferrer" target="_blank"></a>
+</div>
+<div class="frame frame3">
+<a class="link" href="https://www.bms.com/assets/bms/ca/brand-guides-and-tools/OPDIVO_GE_CASE.pdf" id="clickTag3" rel="noopener noreferrer" target="_blank"></a>
+</div>
+<div class="frame frame4">
+<a class="link" href="https://www.bms.com/assets/bms/ca/brand-guides-and-tools/OPDIVO_GE_CASE.pdf" id="clickTag4" rel="noopener noreferrer" target="_blank"></a>
+<a class="center-link" href="https://www.bms.com/assets/bms/ca/documents/productmonograph/OPDIVO_EN_PM.pdf" id="clickTag5" rel="noopener noreferrer" target="_blank"></a>
+</div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var clickTagMain = "https://www.bms.com/assets/bms/ca/brand-guides-and-tools/OPDIVO_GE_CASE.pdf";
+        var clickTagCenter = "https://www.bms.com/assets/bms/ca/documents/productmonograph/OPDIVO_EN_PM.pdf";
+
+        document.querySelectorAll('.link').forEach(function(link) {
+            link.href = clickTagMain;
+        });
+
+        var centerLink = document.querySelector('.center-link');
+        if (centerLink) {
+            centerLink.href = clickTagCenter;
+        }
+
+        var frames = document.querySelectorAll('.frame');
+        var currentIndex = 0;
+
+        function showNextFrame() {
+            frames[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex + 1) % frames.length;
+            frames[currentIndex].style.display = 'block';
+        }
+
+        setInterval(showNextFrame, 5000);
+    });
+    </script></body>
+</html>
