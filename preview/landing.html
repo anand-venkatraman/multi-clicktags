@@ -44,6 +44,8 @@
             const rurl = getQueryParam('rurl');
             document.getElementById('redirectUrl').innerText = rurl;
             document.getElementById('redirLink').href = rurl;
+            const clickTagName = getQueryParam('ct');
+            document.getElementById('clickTagName').innerText = clickTagName;
         }
     </script>
   </head>
@@ -57,7 +59,7 @@
               <img src="https://media.contextweb.com/creatives/click/ctr.svg"/>
             </div>
             <div>
-                Looks like you're trying to click through to
+                Looks like you're trying to click through (via a clickTag named <i><b><span id="clickTagName"></span></b></i>) to.
             </div>
             <div id="redirectUrl"></div>
             <div>

@@ -20,9 +20,10 @@
                     var creativeName = $('#creativeName').val();
                     $('#creative')[0].src = `creatives/${creativeName}/original/index.html`;
                     var previewSrc = `creatives/${creativeName}/modified/index.html?`;
-                    var clickTagLoc = window.location.href.substring(0, window.location.href.lastIndexOf("/") + 1) + "landing.html?rurl=";
+                    var clickTagLoc = window.location.href.substring(0, window.location.href.lastIndexOf("/") + 1) + "landing.html?ct={clickTag}&rurl=";
                     for (var i = 0; i < clickCount; i++) {
-                        previewSrc += 'clickTag' +  (i ? (i+1) : '') + '=' + encodeURIComponent(clickTagLoc) + "&";
+                        let clickTagName = 'clickTag' +  (i ? (i+1) : '');
+                        previewSrc += clickTagName + '=' + encodeURIComponent(clickTagLoc.replace('{clickTag}', clickTagName)) + "&";
                     }
                     $('#previewCreative')[0].src = previewSrc;
                 });
